@@ -36,9 +36,9 @@ class DebtSimplification {
 
       for (var valueKey in valueKeys) {
         var convertedObj = {
-          "Person": valueKey,
-          "Amount Owed": values[valueKey],
-          "Amount Owed To": keys[0],
+          'Person': valueKey,
+          'Amount Owed': values[valueKey],
+          'Amount Owed To': keys[0],
         };
         debts.add(convertedObj);
       }
@@ -47,9 +47,9 @@ class DebtSimplification {
     Map<String, int> balance = {};
 
     for (var debt in debts) {
-      var debtor = debt["Person"]!;
-      var creditor = debt["Amount Owed To"];
-      var amount = debt["Amount Owed"] as int;
+      var debtor = debt['Person']!;
+      var creditor = debt['Amount Owed To'];
+      var amount = debt['Amount Owed'] as int;
 
       if (debtor == creditor) {
         continue;
@@ -69,11 +69,11 @@ class DebtSimplification {
             var amountPaid = balance[person]!;
 
             if (amountPaid >= amountOwed) {
-              results.add("$otherPerson owes $person \$$amountOwed");
+              results.add('$otherPerson owes $person \$$amountOwed');
               balance[person] = balance[person]! - amountOwed;
               balance[otherPerson] = 0;
             } else {
-              results.add("$otherPerson owes $person \$$amountPaid");
+              results.add('$otherPerson owes $person \$$amountPaid');
               balance[person] = 0;
               balance[otherPerson] = balance[otherPerson]! + amountPaid;
               break;
