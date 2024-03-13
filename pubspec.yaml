@@ -1,6 +1,6 @@
 name: debt_simplification
 description: A Dart function for simplifying group debt settlements, similar to 'Quick Split'.
-version: 1.0.0
+version: 1.0.1
 homepage: https://github.com/i-aiymen/debt_simplification
 repository: https://github.com/i-aiymen/debt_simplification
 

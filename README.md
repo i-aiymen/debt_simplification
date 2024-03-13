@@ -1,4 +1,4 @@
-# windows_toast
+# debt_simplification
 
 [![pub package](https://img.shields.io/pub/v/debt_simplification.svg)](https://pub.dev/packages/debt_simplification)
 [![style: lint](https://img.shields.io/badge/style-lint-4BC0F5.svg)](https://pub.dev/packages/lint)
