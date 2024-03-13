@@ -1,4 +1,28 @@
+/// `DebtSimplification` is a class that provides a static method `simplify`
+/// to simplify a list of debts between people.
+library;
+
 class DebtSimplification {
+  /// The `simplify` method takes a list of initial debts and simplifies it.
+  ///
+  /// It first converts the initial debts into a more manageable format,
+  /// where each debt is represented as a map with keys "Person", "Amount Owed",
+  /// and "Amount Owed To".
+  ///
+  /// Then, it calculates the balance for each person by subtracting the amount
+  /// they owe from the amount they are owed.
+  ///
+  /// Finally, it generates a list of simplified debts, where each debt is a
+  /// string in the format "Person A owes Person B $X". The debts are simplified
+  /// in such a way that each person only owes money to at most one other person.
+  ///
+  /// @param initialDebts A list of initial debts, where each debt is represented
+  /// as a map with keys being the names of the people and values being another
+  /// map with keys being the names of the people they owe money to and values
+  /// being the amount of money owed.
+  ///
+  /// @return A list of simplified debts, where each debt is a string in the
+  /// format "Person A owes Person B $X".
   static List simplify(List initialDebts) {
     List<Map<String, dynamic>> debts = [];
 
