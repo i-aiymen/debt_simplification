@@ -1,39 +1,57 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# windows_toast
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
+[![pub package](https://img.shields.io/pub/v/debt_simplification.svg)](https://pub.dev/packages/debt_simplification)
+[![style: lint](https://img.shields.io/badge/style-lint-4BC0F5.svg)](https://pub.dev/packages/lint)
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
+A Dart function that simplifies debt settlements among a group, similar to 'Quick Split' app. Takes a list of debts and returns a simplified list.
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+## Features Supported
 
-## Features
+See the example app for detailed implementation information.
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+| Features               | Android            | iOS                | macOS                | Web | Windows |
+|------------------------|--------------------|--------------------|----------------------|-----|---------|
+| Show toast             | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark:   | :heavy_check_mark: | :heavy_check_mark: |
 
-## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+## Platform Support
+
+| Android | iOS | macOS | Web | Linux | Windows |
+|---------|-----|-------|-----|-------|---------|
+| ✔       | ✔   | ✔     | ✔   | ✔   | ✔     |
+
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
-
-```dart
-const like = 'sample';
+Import the package with:
+```
+import 'package:debt_simplification/debt_simplification.dart';
 ```
 
-## Additional information
+Then, use the following code to simplify the debts:
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+```
+List<Map<String, Map<String, int>>> initialDebts = [
+    {
+        "Alice": {
+        "Bob": 10,
+        "Charlie": 5,
+        } // Bob owes Alice 10, Charlie owes Alice 5
+    },
+    {
+        "Bob": {
+        "Alice": 2,
+        "Charlie": 3,
+        } // Alice owes Bob 2, Charlie owes Bob 3
+    },
+    {
+        "Charlie": {
+        "Alice": 7,
+        } // Alice owes Charlie 7
+    }
+];
+
+List simplifiedDebts = DebtSimplification.simplify(initialDebts);
+```
+
+

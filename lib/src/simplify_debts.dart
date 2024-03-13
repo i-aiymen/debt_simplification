@@ -1,9 +1,9 @@
-/// `DebtSimplification` is a class that provides a static method `simplify`
+/// [DebtSimplification] is a class that provides a static method `simplify`
 /// to simplify a list of debts between people.
 library;
 
 class DebtSimplification {
-  /// The `simplify` method takes a list of initial debts and simplifies it.
+  /// The [simplify] method takes a list of initial debts and simplifies it.
   ///
   /// It first converts the initial debts into a more manageable format,
   /// where each debt is represented as a map with keys "Person", "Amount Owed",
@@ -16,7 +16,7 @@ class DebtSimplification {
   /// string in the format "Person A owes Person B $X". The debts are simplified
   /// in such a way that each person only owes money to at most one other person.
   ///
-  /// @param initialDebts A list of initial debts, where each debt is represented
+  /// @param [initialDebts] A list of initial debts, where each debt is represented
   /// as a map with keys being the names of the people and values being another
   /// map with keys being the names of the people they owe money to and values
   /// being the amount of money owed.
